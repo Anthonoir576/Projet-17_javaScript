@@ -40,6 +40,9 @@ nav {
     color: white;
     text-decoration: none;
 
+    display: block;
+    width: 70px;
+
 }
 
 .nav-elements a:visited {
@@ -52,6 +55,12 @@ nav {
 
     
     transition: all .3s ease-in-out;
+
+    & a {
+
+        width: 200px;
+
+    }
 
 }
 
@@ -72,7 +81,7 @@ nav {
 
 .nav-links li {
 
-    padding: 1rem;
+    padding: 0rem;
     transition: all 0.2s ease;
 
 }
@@ -105,7 +114,9 @@ p {
 p::first-letter {
 
     font-size: 1.5rem;
-    color: rgb(0, 144, 216);
+    color: #7451eb;
+    font-weight: 900;
+    padding-right: 2px;
 
 }
 
@@ -129,7 +140,7 @@ p::first-letter {
     width: 50%;
     height: auto;
 
-}
+} 
 
 .improvise {
 
@@ -150,7 +161,7 @@ p::first-letter {
     width: 60%;
     padding: 2rem;
     opacity: 0;
-    transform: translateX(-200px);
+    transform: translateX(500px);
     transition: 1s ease-in;
 
 }
@@ -176,7 +187,8 @@ p::first-letter {
 .overcome {
 
     padding: 2rem;
-    background: #7551eb3a;
+    background: #7551eb;
+    color: white;
 
     display: flex;
     flex-direction: column;
@@ -243,7 +255,7 @@ p::first-letter {
     height: 250px;
     width: 520px;
     text-align: center;
-    background: linear-gradient(90deg, #30587A, rgb(36, 113, 180));
+    background: linear-gradient(90deg, #7451eb, #7551eb91);
     border-radius: 76% 24% 90% 10% / 20% 85% 15% 80%;
     box-shadow: 0 5px 10px black;
     opacity: 0;
@@ -272,10 +284,10 @@ p::first-letter {
 
 .button-container input {
 
-    border: 1px solid #333;
-    padding: 1rem 2rem;
+    border: 1px solid rgb(143, 143, 143);
+    padding: 0.5rem 1rem;
     border-radius: 15px;
-    box-shadow: 1px 2px 0 black;
+    box-shadow: 1px 2px 0 rgba(194, 194, 194, 0.377);
     outline: none;
     font-size: 1.2rem;
     transition: .5s;
@@ -284,28 +296,33 @@ p::first-letter {
 
 .button-container input:focus {
 
-    background: rgb(211, 242, 251);
+    background: rgba(255, 255, 255, 0.719);
+    border: 1px solid white;
+    box-shadow: 0 0 10px 1px white;
 
 }
 
 .button-container button {
 
     border-radius: 15px;
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
-    border: 1px solid #333;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border: 1px solid rgb(175, 175, 175);
     outline: none;
     cursor: pointer;
     background: white;
-    box-shadow: 1px 2px 0 black;
+    box-shadow: 1px 2px 0 rgba(240, 240, 240, 0.397);
     transition: 0.3s;
 
 }
 
 .button-container button:hover {
 
-    background: rgb(211, 242, 251);
+    background: #7451eb;
+    color: white;
     transform: translateX(-1px);
+    border: 1px solid white;
+    box-shadow: 0 0 10px 1px white;
 
 }
 
@@ -330,7 +347,7 @@ p::first-letter {
 
 .fa-times-circle:hover {
 
-    color: rgb(211, 242, 251);
+    color: #333;
     transform: translateX(-1px);
 
 }
