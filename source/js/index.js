@@ -1,5 +1,6 @@
 const imgWork = document.getElementById('img-improvise');
 const popUp = document.getElementById('pop-up');
+let playOnlyOne = true;
 
 // offsetHeight = la hauteur de la page complete et depend de la taille de la fenetre
 // innerHeight = a la taille du VH si tu ouvres la console et la met en bas de la fenetre cette valeur serra plus petite
@@ -14,20 +15,36 @@ window.addEventListener('scroll', () => {
         imgWork.style.opacity = '1';
         imgWork.style.transform = 'none';
 
-    }
+    };
 
 
     // NEWLETTER
+    let  playOne = () => {
 
-    if (scrollValue > 0.85) {
+        if (scrollValue > 0.85 && playOnlyOne) {
 
-        this.setTimeout(() => {
+            this.setTimeout(() => {
+    
+                popUp.style.opacity = "1";
+                popUp.style.transform = "none";
+                
+            }, 1500);
+    
+            playOnlyOne = false;
+    
+        };
 
-            popUp.style.opacity = "1";
-            popUp.style.transform = "none";
-            
-        }, 1500);
+    };
 
-    }
+    playOne();
+
+});
+
+
+
+document.getElementById('close').addEventListener('click', () => {
+
+    popUp.style.opacity = '0';
+    popUp.style.transform = 'translateX(500px)';
 
 });
